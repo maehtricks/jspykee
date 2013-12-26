@@ -1,4 +1,4 @@
-spykeej
+libspykeej
 =======
 
 Java library for controlling Spykee the robot (http://www.spykeeworld.com/spykee/UK/index.html).
