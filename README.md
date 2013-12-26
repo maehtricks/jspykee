@@ -9,7 +9,8 @@ Original firmware is not supported and is untested.
 Todo
 ====
 
-* Documentation
-* Tests
-* Audio Support
-* License
+* documentation
+* tests
+* audio support
+* connection error handling
+* license
