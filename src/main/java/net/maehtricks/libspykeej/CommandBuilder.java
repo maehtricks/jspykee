@@ -64,11 +64,11 @@ public class CommandBuilder {
     }
 
     /**
-     * Gets the stop command.
+     * Gets the stop motion command.
      * 
-     * @return the stop command
+     * @return the stop motion command
      */
-    public static byte[] getStopCommand() {
+    public static byte[] getStopMotionCommand() {
         byte[] cmd = { 'P', 'K', 5, 0, 2, 0, 0 };
         return cmd;
     }
@@ -130,6 +130,11 @@ public class CommandBuilder {
      */
     public static byte[] getCameraFpsCommand(int fps) {
         byte[] cmd = { 'P', 'K', 35, 0, 2, 1, Integer.valueOf(fps).byteValue() };
+        return cmd;
+    }
+    
+    public static byte[] getLoginSentence() {
+        byte[] cmd = { 'P', 'K', 0x0a, 0 };
         return cmd;
     }
 
