@@ -1,4 +1,4 @@
-package net.maehtricks.jspykee;
+package net.maehtricks.libspykeej;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -11,7 +11,7 @@ import net.maehtricks.jspykee.datatype.AutoStop;
 import net.maehtricks.jspykee.datatype.CameraResolution;
 import net.maehtricks.jspykee.datatype.Dock;
 import net.maehtricks.jspykee.datatype.Led;
-import net.maehtricks.jspykee.util.DebugUtil;
+import net.maehtricks.libspykeej.util.DebugUtil;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.ArrayUtils;

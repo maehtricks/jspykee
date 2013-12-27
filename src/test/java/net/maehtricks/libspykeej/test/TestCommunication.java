@@ -1,13 +1,13 @@
-package net.maehtricks.jspykee.test;
+package net.maehtricks.libspykeej.test;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.Date;
 
-import net.maehtricks.jspykee.LoginResponse;
-import net.maehtricks.jspykee.SpykeeConnector;
-import net.maehtricks.jspykee.SpykeeDataReceiver;
 import net.maehtricks.jspykee.datatype.CameraResolution;
+import net.maehtricks.libspykeej.LoginResponse;
+import net.maehtricks.libspykeej.SpykeeConnector;
+import net.maehtricks.libspykeej.SpykeeDataReceiver;
 
 import org.apache.commons.io.FileUtils;
 import org.junit.Test;

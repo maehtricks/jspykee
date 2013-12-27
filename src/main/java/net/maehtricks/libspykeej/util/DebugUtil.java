@@ -1,4 +1,4 @@
-package net.maehtricks.jspykee.util;
+package net.maehtricks.libspykeej.util;
 
 public class DebugUtil {
     // The number of characters decoded per line in the hex dump

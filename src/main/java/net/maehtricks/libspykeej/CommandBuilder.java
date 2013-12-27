@@ -1,4 +1,4 @@
-package net.maehtricks.jspykee;
+package net.maehtricks.libspykeej;
 
 public class CommandBuilder {
 

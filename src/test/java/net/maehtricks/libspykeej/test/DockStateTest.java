@@ -1,11 +1,11 @@
-package net.maehtricks.jspykee.test;
+package net.maehtricks.libspykeej.test;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
 import net.maehtricks.jspykee.datatype.DockState;
-import net.maehtricks.jspykee.util.Communication;
+import net.maehtricks.libspykeej.util.Communication;
 
 import org.junit.Test;
 

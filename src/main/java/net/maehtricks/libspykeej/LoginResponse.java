@@ -1,9 +1,9 @@
-package net.maehtricks.jspykee;
+package net.maehtricks.libspykeej;
 
 import java.io.UnsupportedEncodingException;
 
 import net.maehtricks.jspykee.datatype.DockState;
-import net.maehtricks.jspykee.util.ReverseEnumMap;
+import net.maehtricks.libspykeej.util.ReverseEnumMap;
 
 public class LoginResponse {
 	private static final ReverseEnumMap<DockState> dockStates = new ReverseEnumMap<DockState>(DockState.class);

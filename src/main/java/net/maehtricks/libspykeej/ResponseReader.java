@@ -1,4 +1,4 @@
-package net.maehtricks.jspykee;
+package net.maehtricks.libspykeej;
 
 import java.io.DataInputStream;
 import java.io.IOException;

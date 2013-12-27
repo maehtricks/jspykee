@@ -1,6 +1,6 @@
 package net.maehtricks.jspykee.datatype;
 
-import net.maehtricks.jspykee.util.EnumConverter;
+import net.maehtricks.libspykeej.util.EnumConverter;
 
 
 public enum DockState implements EnumConverter {

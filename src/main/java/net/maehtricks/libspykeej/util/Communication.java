@@ -1,4 +1,4 @@
-package net.maehtricks.jspykee.util;
+package net.maehtricks.libspykeej.util;
 
 import java.io.*;
 
