@@ -129,6 +129,16 @@ public class SpykeeConnector {
         byte[] cmd = CommandBuilder.getMotionCommand(autoStop.value(), left, right);
         sendCommand(cmd);
     }
+    
+    public void sendMotionCommand(int left, int right) {
+        byte[] cmd = CommandBuilder.getMotionCommand(left, right);
+        sendCommand(cmd);
+    }    
+    
+    public void sendStopCommand(AutoStop autoStop, int left, int right) {
+        byte[] cmd = CommandBuilder.getStopCommand();
+        sendCommand(cmd);
+    }    
 
     public void sendLightCommand(Led led, boolean enable) {
         byte[] cmd = CommandBuilder.getLightCommand(led.value(), enable);

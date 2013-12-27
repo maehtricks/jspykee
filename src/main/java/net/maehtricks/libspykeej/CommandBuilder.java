@@ -17,6 +17,18 @@ public class CommandBuilder {
         return cmd;
     }
     
+    public static byte[] getMotionCommand(int left, int right) {
+        byte[] cmd = { 'P', 'K', 5, 0, 3, 0, //
+                Integer.valueOf(left).byteValue(), //
+                Integer.valueOf(right).byteValue() };
+        return cmd;
+    }    
+    
+    public static byte[] getStopCommand() {
+        byte[] cmd = { 'P', 'K', 5, 0, 2, 0, 0 };
+        return cmd;
+    }    
+    
     public static byte[] getCameraEnableCommand(boolean enable) {
         byte[] cmd = { 'P', 'K', 15, 0, 2, 1, //
                 Integer.valueOf(enable ? 1 : 0).byteValue() };
