@@ -8,8 +8,7 @@ Original firmware is not supported and is untested.
 
 Compiling / Building
 --------------------
-# Checkout with Eclipse
-# or build with Maven
+Checkout with Eclipse or build with Maven :)
 
 Todo
 ----
