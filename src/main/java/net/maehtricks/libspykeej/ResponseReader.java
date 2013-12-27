@@ -8,16 +8,31 @@ import net.maehtricks.libspykeej.datatype.MessageType;
 
 import org.apache.commons.io.IOUtils;
 
+/**
+ * The Class ResponseReader reads data from Spykee via InputStream and calls the
+ * appropriate handler for each event.
+ */
 public class ResponseReader implements Runnable {
 
     private DataInputStream inputStream;
     private volatile boolean isStopped = false;
     private volatile SpykeeDataReceiver dataReceiver;
 
+    /**
+     * Sets the data receiver.
+     * 
+     * @param dataReceiver
+     *            the new data receiver
+     */
     public void setDataReceiver(SpykeeDataReceiver dataReceiver) {
         this.dataReceiver = dataReceiver;
     }
 
+    /*
+     * (non-Javadoc)
+     * 
+     * @see java.lang.Runnable#run()
+     */
     @Override
     public void run() {
         byte[] header = new byte[5];
@@ -48,6 +63,14 @@ public class ResponseReader implements Runnable {
         }
     }
 
+    /**
+     * Handles messages and calls the appropriate event receiver method.
+     * 
+     * @param cmd
+     *            the cmd
+     * @param buffer
+     *            the buffer
+     */
     private void handleMessage(int cmd, byte[] buffer) {
         switch (cmd) {
         case MessageType.NONE:
@@ -72,13 +95,22 @@ public class ResponseReader implements Runnable {
         }
     }
 
+    /**
+     * Sets the input stream.
+     * 
+     * @param inputStream
+     *            the new input stream
+     */
     public void setInputStream(DataInputStream inputStream) {
         this.inputStream = inputStream;
         this.isStopped = false;
     }
 
+    /**
+     * Stops the reader loop.
+     */
     public void stop() {
         this.isStopped = true;
     }
-    
+
 }

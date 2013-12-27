@@ -5,9 +5,12 @@ import java.io.UnsupportedEncodingException;
 import net.maehtricks.libspykeej.datatype.DockState;
 import net.maehtricks.libspykeej.util.ReverseEnumMap;
 
+/**
+ * The Class LoginResponse encapsulates Spykee's login information.
+ */
 public class LoginResponse {
-	private static final ReverseEnumMap<DockState> dockStates = new ReverseEnumMap<DockState>(DockState.class);
 	
+	private static final ReverseEnumMap<DockState> dockStates = new ReverseEnumMap<DockState>(DockState.class);
 	private final String name1;
 	private final String name2;
 	private final String name3;
@@ -15,6 +18,15 @@ public class LoginResponse {
 	private final DockState dockState;
 	private final boolean isSuccess;
 
+	/**
+	 * Instantiates a new login response.
+	 *
+	 * @param name1 the name1
+	 * @param name2 the name2
+	 * @param name3 the name3
+	 * @param version the version
+	 * @param dockState the dock state
+	 */
 	private LoginResponse(String name1, String name2, String name3, String version, DockState dockState) {
 		this.name1 = name1;
 		this.name2 = name2;
@@ -24,6 +36,9 @@ public class LoginResponse {
 		this.isSuccess = true;
 	}
 	
+	/**
+	 * Instantiates a empty login response.
+	 */
 	public LoginResponse() {
 		this.name1 = null;
 		this.name2 = null;
@@ -33,6 +48,12 @@ public class LoginResponse {
 		this.isSuccess = false;
 	}
 	
+	/**
+	 * Generates instance from byte array.
+	 *
+	 * @param buffer the buffer
+	 * @return the login response
+	 */
 	public static LoginResponse fromByteArray(byte[] buffer) {
 		int pos = 1;
 		int nameLen = buffer[pos++];
@@ -56,6 +77,14 @@ public class LoginResponse {
 		return new LoginResponse(name1, name2, name3, version, dockState);				
 	}
 	
+	/**
+	 * Byte array to string.
+	 *
+	 * @param buffer the buffer
+	 * @param pos the pos
+	 * @param nameLen the name len
+	 * @return the string
+	 */
 	private static String byteArrayToString(byte[] buffer, int pos, int nameLen) {
 		try {
 			return new String(buffer, pos, nameLen, "ISO-8859-1");
@@ -65,26 +94,56 @@ public class LoginResponse {
 		}
 	}
 	
+	/**
+	 * Gets the name1.
+	 *
+	 * @return the name1
+	 */
 	public String getName1() {
 		return name1;
 	}
 
+	/**
+	 * Gets the name2.
+	 *
+	 * @return the name2
+	 */
 	public String getName2() {
 		return name2;
 	}
 
+	/**
+	 * Gets the name3.
+	 *
+	 * @return the name3
+	 */
 	public String getName3() {
 		return name3;
 	}
 
+	/**
+	 * Gets the version.
+	 *
+	 * @return the version
+	 */
 	public String getVersion() {
 		return version;
 	}
 
+	/**
+	 * Gets the dock state.
+	 *
+	 * @return the dock state
+	 */
 	public DockState getDockState() {
 		return dockState;
 	}
 
+	/**
+	 * Checks if login was successful.
+	 *
+	 * @return true, if successful
+	 */
 	public boolean isSuccess() {
 		return isSuccess;
 	}

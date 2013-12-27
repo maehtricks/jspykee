@@ -1,7 +1,7 @@
 package net.maehtricks.libspykeej;
 
 /**
- * The Class CommandBuilder.
+ * The Class CommandBuilder is a helper class for building Spykee's commands.
  */
 public class CommandBuilder {
 
