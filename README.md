@@ -19,6 +19,7 @@ Usage
 ```
 // create SpykeeConnector
 SpykeeConnector spykeeConnector = new SpykeeConnector();
+
 // add your custom data receiver
 spykeeConnector.addSpykeeDataReceiver(new SpykeeDataReceiver() {
     @Override
