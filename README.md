@@ -31,6 +31,7 @@ spykeeConnector.addSpykeeDataReceiver(new SpykeeDataReceiver() {
     }
     ...
 });
+
 // use dsl style connect
 LoginResponse loginResponse = spykeeConnector
 								.setHost("spykee")
