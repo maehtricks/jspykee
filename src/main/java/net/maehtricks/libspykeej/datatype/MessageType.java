@@ -1,4 +1,4 @@
-package net.maehtricks.jspykee.datatype;
+package net.maehtricks.libspykeej.datatype;
 
 public class MessageType {
     public static final int NONE = 0;

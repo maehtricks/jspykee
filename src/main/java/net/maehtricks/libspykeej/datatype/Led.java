@@ -1,4 +1,4 @@
-package net.maehtricks.jspykee.datatype;
+package net.maehtricks.libspykeej.datatype;
 
 public enum Led {
     CENTER(0), LEFT(1), RIGHT(2);

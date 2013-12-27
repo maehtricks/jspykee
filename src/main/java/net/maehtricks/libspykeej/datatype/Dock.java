@@ -1,4 +1,4 @@
-package net.maehtricks.jspykee.datatype;
+package net.maehtricks.libspykeej.datatype;
 
 public enum Dock {
     DOCK(6), UNDOCK(5), CANCEL(7);

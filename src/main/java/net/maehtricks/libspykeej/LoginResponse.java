@@ -2,7 +2,7 @@ package net.maehtricks.libspykeej;
 
 import java.io.UnsupportedEncodingException;
 
-import net.maehtricks.jspykee.datatype.DockState;
+import net.maehtricks.libspykeej.datatype.DockState;
 import net.maehtricks.libspykeej.util.ReverseEnumMap;
 
 public class LoginResponse {

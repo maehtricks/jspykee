@@ -1,4 +1,4 @@
-package net.maehtricks.jspykee.datatype;
+package net.maehtricks.libspykeej.datatype;
 
 import net.maehtricks.libspykeej.util.EnumConverter;
 

@@ -7,10 +7,10 @@ import java.net.Socket;
 import java.util.List;
 import java.util.Vector;
 
-import net.maehtricks.jspykee.datatype.AutoStop;
-import net.maehtricks.jspykee.datatype.CameraResolution;
-import net.maehtricks.jspykee.datatype.Dock;
-import net.maehtricks.jspykee.datatype.Led;
+import net.maehtricks.libspykeej.datatype.AutoStop;
+import net.maehtricks.libspykeej.datatype.CameraResolution;
+import net.maehtricks.libspykeej.datatype.Dock;
+import net.maehtricks.libspykeej.datatype.Led;
 import net.maehtricks.libspykeej.util.DebugUtil;
 
 import org.apache.commons.io.IOUtils;

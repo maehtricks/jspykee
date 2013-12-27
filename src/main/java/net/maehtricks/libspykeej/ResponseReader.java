@@ -3,7 +3,9 @@ package net.maehtricks.libspykeej;
 import java.io.DataInputStream;
 import java.io.IOException;
 import java.net.SocketException;
-import net.maehtricks.jspykee.datatype.MessageType;
+
+import net.maehtricks.libspykeej.datatype.MessageType;
+
 import org.apache.commons.io.IOUtils;
 
 public class ResponseReader implements Runnable {

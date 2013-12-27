@@ -1,4 +1,4 @@
-package net.maehtricks.jspykee.datatype;
+package net.maehtricks.libspykeej.datatype;
 
 public enum CameraResolution {
     LOW(0), MEDIUM(1), HIGH(2);

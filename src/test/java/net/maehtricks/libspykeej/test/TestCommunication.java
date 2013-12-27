@@ -4,10 +4,10 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Date;
 
-import net.maehtricks.jspykee.datatype.CameraResolution;
 import net.maehtricks.libspykeej.LoginResponse;
 import net.maehtricks.libspykeej.SpykeeConnector;
 import net.maehtricks.libspykeej.SpykeeDataReceiver;
+import net.maehtricks.libspykeej.datatype.CameraResolution;
 
 import org.apache.commons.io.FileUtils;
 import org.junit.Test;
