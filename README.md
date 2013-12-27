@@ -14,6 +14,57 @@ Compiling / Building
 --------------------
 Checkout with Eclipse or build with Maven :)
 
+Usage
+-----
+```
+// create SpykeeConnector
+SpykeeConnector spykeeConnector = new SpykeeConnector();
+// add your custom data receiver
+spykeeConnector.addSpykeeDataReceiver(new SpykeeDataReceiver() {
+    @Override
+    public void onVideoFrame(byte[] buffer) {
+    	// implement your camera handling here...
+    	// e.g. writing to filesystem
+    	// or send it to a view
+		...
+    }
+    ...
+});
+// use dsl style connect
+LoginResponse loginResponse = spykeeConnector
+								.setHost("spykee")
+								.setPort(9000)
+								.setUsername("admin")
+								.setPassword("jspykee2013")
+								.connect();
+
+// evaluate login message and issue commands as you like
+if(loginResponse.isSuccess()) {
+    // camera commands
+    spykeeConnector.sendCameraFpsCommand(10);
+    spykeeConnector.sendCameraResolutionCommand(CameraResolution.HIGH);
+    spykeeConnector.sendCameraEnableCommand(true);
+    
+   	// put on some lights
+    spykeeConnector.sendLightCommand(Led.CENTER, true);
+    spykeeConnector.sendLightCommand(Led.LEFT, true);
+    spykeeConnector.sendLightCommand(Led.RIGHT, true);
+    
+    // move your robot!
+   	// go forward
+	spykeeConnector.sendMotionCommand(AutoStop.ms1000, 100, 100);
+    // go backward
+	spykeeConnector.sendMotionCommand(AutoStop.ms1000, -100, -100);
+	// turn left
+	spykeeConnector.sendMotionCommand(AutoStop.ms1000, 100, -100);
+	// turn right
+	spykeeConnector.sendMotionCommand(AutoStop.ms1000, -100, 100);
+	
+    // bye
+	spykeeConnector.disconnect();
+}
+```
+
 Todo
 ----
 
